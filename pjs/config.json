@@ -1,6 +1,7 @@
 {
   "Configs": {
-    "EnableDebug": true
+    "EnableDebug": true,
+    "ClientMaxBodySize": "3m"
   },
   "Listeners": [
     {
@@ -20,12 +21,14 @@
     "8080": {
       "*": {
         "RouteType": "HTTP",
+        "ClientMaxBodySize": "1m",
         "Matches": [
           {
             "Path": {
               "Type": "Prefix",
               "Path": "/"
             },
+            "ClientMaxBodySize": "100k",
             "BackendService": {
               "backendService1": {
                 "Weight": 100
