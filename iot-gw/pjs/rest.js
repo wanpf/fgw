@@ -140,7 +140,8 @@ pipy()
   .replaceMessage(
     msg => (
       (
-        resp = JSON.decode(msg?.body)
+        /// debug = console.log('msg body:', msg?.body),
+        resp = (msg?.body?.toString?.().charAt(0) === '{') && JSON.decode(msg?.body),
       ) => (
         deviceConfig.strapiJwt = resp?.jwt,
         new Message
@@ -199,6 +200,7 @@ pipy()
   .replaceMessage(
     msg => (
       (
+        /// debug = console.log('query config:', msg?.body?.toString?.()),
         resp = JSON.decode(msg?.body),
       ) => (
         (msg?.head?.status === 401) ? (

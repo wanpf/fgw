@@ -10,11 +10,11 @@
     )
   )(),
 
-  // ===================================
   // 对采集的数据，进行简单转换。自定义处理函数：
   transformRecords = records => (
     Object.keys(records || {}).forEach(
       key => (
+        // 对采集的温度值除以10，205 表示20.5
         records[key] = +records[key] / 10
       )
     )
