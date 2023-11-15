@@ -21,7 +21,10 @@ ${PRODUCT}: ${ROOT_DIR}/modbus.c
 	clang -I${INC_DIR} ${LDFLAGS} -fPIC -shared $< -o $@
 
 clean:
-	rm -f ${PRODUCT}
+	rm -f ${PRODUCT} modbus-writer
 
 test:
 	${BIN_DIR}/pipy main.js --threads=max --reuse-port
+
+tool:
+	clang -I${INC_DIR} ${LDFLAGS} modbus-writer.c -o modbus-writer
