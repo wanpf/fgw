@@ -1,5 +1,5 @@
 # 一、说明  
-iot-gw 使用 pipy + modbus协议（RS485通信）采集iot设备数据。  
+iot-gateway 使用 pipy + modbus协议（RS485通信）采集iot设备数据。  
 # 二、编译 pipy + modbus-nmi.so 
 需要使用root权限操作如下步骤：  
 ## 1. 编译pipy  
@@ -24,10 +24,10 @@ cd /root/flomesh/pipy/samples/nmi/
 git init
 git remote add origin https://github.com/flomesh-io/fgw.git
 git config core.sparseCheckout true
-git sparse-checkout set /iot-gw/modbus-nmi/
+git sparse-checkout set /iot-gateway/modbus-nmi/
 git pull origin main 
-mv iot-gw/modbus-nmi .
-rmdir -p iot-gw
+mv iot-gateway/modbus-nmi .
+rmdir -p iot-gateway
 cd modbus-nmi && make && cp modbus-nmi.so /root/flomesh/bin/
 cd /root/flomesh/bin
 ```
@@ -43,7 +43,7 @@ drwxr-xr-x 6 root root     4096 11月 15 16:04 ../
 -rwxr-xr-x 1 root root 11179776 11月 15 10:13 pipy*
 ```
 # 三、配置、启动采集程序   
-1. 下载 iot-gw/pjs 目录下的文件保存到 /root/pipy-modbus 目录下    
+1. 下载 iot-gateway/pjs 目录下的文件保存到 /root/pipy-modbus 目录下    
 2. 将 /root/flomesh/bin 下编译好的文件拷贝到 /root/pipy-modbus 目录下
 3. 修改 /root/pipy-modbus/config.json 配置文件  
    a）修改连接iot设备的名称，比如："deviceName": "/dev/ttyUSB0"  
