@@ -32,7 +32,7 @@ cd modbus-nmi && make && cp modbus-nmi.so /root/flomesh/bin/
 cd /root/flomesh/bin
 ```
 ## 4. 编译完成后，在 /root/flomesh/bin 目录有如下这些文件    
-<img width="665" alt="image" src="https://github.com/flomesh-io/fgw/assets/2276200/9c4b2bfe-156f-40ba-82be-a2c4f389f635">
+<img width="665" alt="image" src="https://github.com/wanpf/fgw/assets/2276200/9c4b2bfe-156f-40ba-82be-a2c4f389f635">
 
 # 三、配置、启动采集程序   
 1. 下载 iot-gw/pjs 目录下的文件保存到 /root/pipy-modbus 目录下    
