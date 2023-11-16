@@ -1,4 +1,6 @@
-# 编译 pipy + modbus-nmi.so 
+# 一、说明  
+iot-gw 使用 pipy + modbus协议（RS485通信）采集iot设备数据。  
+# 二、编译 pipy + modbus-nmi.so 
 需要使用root权限操作如下步骤  
 ## 1. 编译pipy  
 ```bash
